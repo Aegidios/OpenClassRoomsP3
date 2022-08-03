@@ -68,3 +68,32 @@
     display: block;
     overflow: hidden
 }
+
+@mixin animation{
+
+.menu__content__list__item {
+    visibility: hidden;
+    animation: 2s ease FadeIn forwards;
+}
+
+@for $i from 1 through 4 {
+  .menu__content__list__item {
+    
+    &:nth-child(#{$i}) {
+      
+      animation-delay: $i * (300ms);
+    }
+  }
+}
+
+@keyframes FadeIn {
+    0%{
+        visibility: hidden;
+        opacity: 0;
+    }
+  100%{
+    visibility: visible;
+    opacity: 1;
+  }
+}
+}

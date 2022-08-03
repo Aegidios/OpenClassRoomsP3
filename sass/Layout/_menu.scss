@@ -70,19 +70,6 @@
                 gap: 20px;
                 justify-content: center;
             }
-            opacity: 0;
-            $n:3;
-            animation: FadeIn ease 5s forwards;
-            @for $x from 0 through $n {
-                &:nth-child(#{$x}) {
-                  animation-delay: 100ms * ($x - 1);
-                }
-              }
-                @keyframes FadeIn{
-                    to{
-                            opacity:1;
-                    }
-                }
             &__item{
                 background-color: #fff;
                 border-radius: 1.1rem;
@@ -91,13 +78,14 @@
                 margin-bottom: 1rem;
                 flex-direction: row;
                 justify-content: space-between;
+                overflow: hidden;
                 box-shadow: 2px 2px 5px 0px rgb(168 168 168 / 30%);
                 -webkit-box-shadow: 2px 2px 5px 0px rgb(168 168 168 / 30%);
                 -moz-box-shadow: 2px 2px 5px 0px rgba(168,168,168,0.3);
                 @media (min-width:751px) and (max-width:1200px){
                     width: 22rem;
                 }
-                &:hover{
+                &:hover,&:focus{
                     .menu__content__list__item__infos{
                         width: 75%;
                         h3,p{
@@ -106,16 +94,18 @@
                     }
                     .menu__content__list__item__check{
                         display: flex;
-                        animation: translate 1s;
+                        animation: translate 500ms ease-in-out forwards;
+                        transform-origin: right ;
+                        position: relative;
                     }
                     @keyframes translate{
                         0%{
-                            right: 0;
-                            opacity:0;
+                            opacity: 0;
+                            right: -100px;
                         }
                         100%{
-                            left: 0;
                             opacity: 1;
+                            right: 0;
                         }
                     }
                     .fa-circle-check{
@@ -139,7 +129,8 @@
                     flex-direction: column;
                     justify-content: space-around;
                     width: 93%;
-                    margin: auto;
+                    margin-left: 12px;
+                    transition: 500ms;
                     h3{
                         margin-bottom: 5px;
                     }
@@ -160,6 +151,7 @@
                     color: #fff;
                     background-color: $colour-tertiary;
                     border-radius: 0 1.1rem 1.1rem 0;
+                    transition: 500ms;
                 }
             }
         }
@@ -177,3 +169,5 @@
         }
     }
 }
+
+@include animation;
