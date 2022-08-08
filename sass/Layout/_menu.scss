@@ -94,34 +94,25 @@
                     }
                     .menu__content__list__item__check{
                         display: flex;
-                        animation: translate 500ms ease-in-out forwards;
-                        transform-origin: right ;
-                        position: relative;
+                        width: 70px;
+                        padding: 25px;
+                        animation-name: translate;
+                        animation-duration: 500ms;
+                        
                     }
                     @keyframes translate{
                         0%{
-                            opacity: 0;
-                            right: -100px;
+                            width: 0;
+                            padding: 25px 0 25px 0;
                         }
                         100%{
-                            opacity: 1;
-                            right: 0;
+                            width: 70px;
+                            padding: 25px;
                         }
                     }
+                    
                     .fa-circle-check{
-                        animation: rotate 500ms ease;
-                    }
-
-                    @keyframes rotate{
-                        0% {
-                            transform: rotate(0deg);
-                        }
-                        50% {
-                        transform: rotate(180deg);
-                        }
-                        100% {
                         transform: rotate(360deg);
-                        }
                     }
                 }
                 &__infos{
@@ -145,13 +136,18 @@
                     }
                 }
                 &__check{
-                    padding: 25px;
-                    display: none;
+                    width: 0;
+                    /* display: none; */
                     font-size: 1.2rem;
                     color: #fff;
                     background-color: $colour-tertiary;
                     border-radius: 0 1.1rem 1.1rem 0;
-                    
+                    padding: 25px 0 25px 0;
+                    transition: all 500ms;
+
+                    i{
+                        transition: all 500ms;
+                    }
                 }
             }
         }
