@@ -1,0 +1,22 @@
+.welcome_title{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+    height: 310px;
+    background:$colour-background;
+    padding-bottom: 3rem;
+    h1{
+        font-size: 1.8rem;
+        margin: 2.5rem 3rem 0 3rem;
+        
+    }
+    p{
+        margin: .9rem 1rem 1.5rem 1rem;
+        font-weight: 300;
+        font-size: 1.2rem;
+    }
+    a{
+        @include button;
+    }
+}

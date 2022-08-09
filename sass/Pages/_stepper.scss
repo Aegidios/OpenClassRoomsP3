@@ -1,0 +1,50 @@
+.stepper{
+    padding: .2rem 1.5rem 2.4rem;
+    display: flex;
+    flex-direction: column;
+    h2{
+        margin-top:3rem;
+        margin-bottom: 2rem;
+    }
+    &__card{
+        justify-content: flex-start;
+        @media (min-width:1024px){
+            display: flex;
+            justify-content: space-around;
+        }
+        &__item{
+            @media (min-width:1024px){
+                height: 110px;
+                width: 30%;
+            }
+            &:hover{
+                background-color: #f5edff;
+                a{
+                    i{
+                        color: $colour-primary;
+                    }
+                }
+            }
+             @include stepper__card;
+             a{
+                text-decoration: none;
+                font-weight: bold;
+                i{
+                    padding-right: 1.5rem;
+                    margin-left: 1.5rem;
+                    color: #8d8d8d;
+                    font-size: 1.2rem;
+                }
+             }
+             &__number{
+                background-color: #9356dc;
+                padding: 4px 5px 4px 8px;
+                color: #fff;
+                position: relative;
+                right: 17px;
+                border-radius: 50%;
+                font-size: 0.9rem;
+             }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "openclassroomsp3",
+  "version": "1.0.0",
+  "description": "Projet3OpenClassRooms",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./assets/styles/styles.css --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aegidios/OpenClassRoomsP3.git"
+  },
+  "author": "Gilles MARTINEL",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aegidios/OpenClassRoomsP3/issues"
+  },
+  "homepage": "https://github.com/Aegidios/OpenClassRoomsP3#readme"
+}
